@@ -1,0 +1,17 @@
+{
+    "name": "sashapc/cmsoop",
+    "authors": [
+        {
+            "name": "sashaxxd",
+            "email": "webdizain@bk.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "Engine\\": "engine",
+            "Engine\\DI\\": "engine/DI",
+            "Trening\\": "trening"
+        }
+    }
+}
