@@ -9,6 +9,8 @@ class Cms
      */
     private $di;
 
+    private $router;
+
     /**
      * Cms constructor
      * @param $di
@@ -16,6 +18,7 @@ class Cms
     public function __construct($di){  //Конструктор параметр можно передать сразу в экземпляр на создавая доп. функцию
 
         $this->di = $di;
+        $this->router = $this->di->get('router');
 
     }
 
@@ -24,7 +27,9 @@ class Cms
      */
     public function run(){
           //$a = $this->di->get('test2');
+//        $this->router->add('dsf','dsf','dsf');
         print_r($this->di);
+
     }
 
 }

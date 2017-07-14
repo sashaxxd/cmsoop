@@ -5,4 +5,4 @@
  */
 
 require_once 'engine/bootstrap.php';
-require_once 'trening/tv.php';
+//require_once 'trening/tv.php';
