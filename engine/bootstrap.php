@@ -19,24 +19,21 @@ try{
 
     $di = new DI();//Создали экземпляр класса
 
-    $di->set('test',['rt =>one']); //Задали значения (set (перевод - задавать)) в функцию set
-    $di->set('test2','2');
+     $services = require __DIR__ . '/Config/Service.php';
 
-   
-    
+    foreach ($services as $service){
+
+        $provider = new $service($di);
+        $provider->init();
+
+    }
+
     $cms = new Cms($di); //Автоматически вызвался конструктор с параметрами $di
 
 
     
     $cms->run(); //Функция вернула значение
 
-    $user = new \Engine\Core\Database\Connection();
-
-//    $user->execute("INSERT INTO `users`(`name`, `password`, `date`) VALUES ('SDF','SDFSDF','56')");
-
-   $us = $user->query("SELECT * FROM `users`");
-
-    print_r($us);
 
 }catch(\ErrorException $e) {
 
